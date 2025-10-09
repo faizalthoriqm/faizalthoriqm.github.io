@@ -62,7 +62,7 @@
 
 /* NOT IMPORTANT - COSMETICS */
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Cabin', sans-serif;
   box-sizing: border-box;
 }
 	
@@ -336,6 +336,11 @@
 </style>
 <!-- Give your "body" the id of "page-top" to load page from start(top of the page) -->
 <body id="page-top">
+	<!-- (PART A) SPLASH SCREEN -->
+    <div id="splash" onclick="start()">&#127929; Click to start!</div>
+
+    <!-- (PART B) BGM -->
+    <audio id="bgm" src="https://faizalthoriqm.github.io/assets/niki.mp3" loop></audio>
     <!-- Prevent Scroll -->
     <div id="preloader-body" class="no-scroll-y">
 
@@ -357,11 +362,6 @@
                         </div>
                         <!-- End: Text Loading -->
 
-						<!-- (PART A) SPLASH SCREEN -->
-    <div id="splash" onclick="start()">&#127929; Click to start!</div>
-
-    <!-- (PART B) BGM -->
-    <audio id="bgm" src="https://faizalthoriqm.github.io/assets/niki.mp3" loop></audio>
                     </div>
 
                     <!-- Start: Preloader sides - Model 1 -->
