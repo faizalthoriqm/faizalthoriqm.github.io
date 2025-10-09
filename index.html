@@ -35,35 +35,59 @@
 	padding: 0;
 	font-family: 'Cabin', sans-serif;
 }
-
-/* (PART A) "PLAY BUTTON" */
-#play {
-  /* (A1) PLACE AT TOP */
-  position: fixed; top: 0; left: 0; z-index: 999;
-  width: 100%; padding: 10px;
-
-  /* (A2) CENTER */
-  display: flex;
-  align-items: center; justify-content: center;
-
-  /* (A3) HIDE */
-  opacity: 0; visibility: hidden;
-
-  /* (A4) COSMETICS */
-  font-size: 24px;
-  color: #fff; background: #000;
+.start-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff22;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+.start-button:hover {
+    background-color: #ffffff44;
+}
+.tag-text {
+    color: #fff;
+    font-size: 1.4em;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    background: linear-gradient(90deg, 
+        #ffffff,
+        #c0c0c0,
+        #e8e8e8,
+        #ffffff,
+        #a0a0a0,
+        #ffffff
+    );
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 
+        silverShine 4s linear infinite,
+        fadeInUp 0.5s forwards;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-/* (A5) SHOW THE "PLAY BUTTON" */
-#play.show {
-  opacity: 1; visibility: visible;
-  transition: all 1s;
-}
+.tag-text:nth-child(1) { animation-delay: 0.5s; }
+.tag-text:nth-child(2) { animation-delay: 1s; }
+.tag-text:nth-child(3) { animation-delay: 1.5s; }
+.tag-text:nth-child(4) { animation-delay: 2.0s; }
+.tag-text:nth-child(5) { animation-delay: 2.5s; }
 
-/* NOT IMPORTANT - COSMETICS */
-* {
-  font-family: 'Cabin', sans-serif;
-  box-sizing: border-box;
+
+.tag-text span {
+    color: #a0a0a0;
+    -webkit-text-fill-color: #e8e8e8;
+    opacity: 0.9;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 	
 /* Load Settings */
@@ -336,17 +360,14 @@
 </style>
 <!-- Give your "body" the id of "page-top" to load page from start(top of the page) -->
 <body id="page-top">
-	<!-- (PART A) SPLASH SCREEN -->
-    <div id="splash" onclick="start()">&#127929; Click to start!</div>
-
-    <!-- (PART B) BGM -->
-    <audio id="bgm" src="https://faizalthoriqm.github.io/assets/niki.mp3" loop></audio>
+	<audio id="bg-music" src="https://faizalthoriqm.github.io/assets/niki.mp3" autoplay loop></audio>
     <!-- Prevent Scroll -->
     <div id="preloader-body" class="no-scroll-y">
 
         <!-- Start: Preloader -->
         <section id="preloader-section">
             <div id="preloader">
+				<div id="start-btn" class="start-button tag-text">Tap here to Start</div>
                 <div id="ctn-preloader" class="ctn-preloader">
                     <div class="animation-preloader">
                         
@@ -361,7 +382,6 @@
                             <span data-text-preloader="E" class="letters-loading">E</span> -->
                         </div>
                         <!-- End: Text Loading -->
-
                     </div>
 
                     <!-- Start: Preloader sides - Model 1 -->
@@ -2127,7 +2147,11 @@ about schools and school websites related to the world of digitalization.
   splash.classList.add("hide");
 }</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-    
+</script>
+	 <script>const startBtn = document.getElementById('start-btn');
+    const bgMusic = document.getElementById('bg-music');
+		startBtn.addEventListener('click', () => {
+        bgMusic.play().catch(console.warn);
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
