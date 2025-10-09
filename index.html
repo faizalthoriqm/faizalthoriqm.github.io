@@ -31,15 +31,16 @@
 </head>
 
 <body>
-<div class="tampil" id="tampil">
-		<div class="tampil-body">
-			<div>
-				<h1>Faizal Thoriq Magfirudin</h1>
-				<p>Hello, I am a graduate of a Computer and Network Engineering Vocational School with an interest in the IT world, such as Video Editors, Photographers, Graphic Designs, Programmers, Networks and Hardware and Software.</p>
-				<button onclick=" putarmusic()">Tap here to start</button>
-			</div>
-		</div>
-	</div>
+	<div class="intro">
+<h1 class="logo-header">
+    <span class="logo">Wel</span><span class="logo">come.</span>
+</h1>
+</div>
+
+<header>
+    <h4>Welcome.</h4>
+</header>
+
 	<style>@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 * {
 	margin: 0;
@@ -73,7 +74,70 @@
 
 	color: white;
 	padding: 10px;
-}</style>
+}
+	
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cabin", sans-serif;
+}
+
+header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+header h4{
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Splash Screen */
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: #fffff;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+</style>
 	
   <!-- #MAIN -->
 
@@ -1813,6 +1877,7 @@ about schools and school websites related to the world of digitalization.
 
 
   <!-- custom js link-->
+  <script src="https://codewithsadee.github.io/vcard-personal-portfolio/assets/js/script.js"></script>
   <script src="https://codewithsadee.github.io/vcard-personal-portfolio/assets/js/script.js"></script>
 
   <!-- ionicon link= -->
