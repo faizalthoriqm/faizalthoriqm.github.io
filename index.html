@@ -35,6 +35,36 @@
 	padding: 0;
 	font-family: 'Cabin', sans-serif;
 }
+
+/* (PART A) "PLAY BUTTON" */
+#play {
+  /* (A1) PLACE AT TOP */
+  position: fixed; top: 0; left: 0; z-index: 999;
+  width: 100%; padding: 10px;
+
+  /* (A2) CENTER */
+  display: flex;
+  align-items: center; justify-content: center;
+
+  /* (A3) HIDE */
+  opacity: 0; visibility: hidden;
+
+  /* (A4) COSMETICS */
+  font-size: 24px;
+  color: #fff; background: #000;
+}
+
+/* (A5) SHOW THE "PLAY BUTTON" */
+#play.show {
+  opacity: 1; visibility: visible;
+  transition: all 1s;
+}
+
+/* NOT IMPORTANT - COSMETICS */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
 	
 /* Load Settings */
 .no-scroll-y {
@@ -327,6 +357,11 @@
                         </div>
                         <!-- End: Text Loading -->
 
+						<!-- (PART A) SPLASH SCREEN -->
+    <div id="splash" onclick="start()">&#127929; Click to start!</div>
+
+    <!-- (PART B) BGM -->
+    <audio id="bgm" src="https://faizalthoriqm.github.io/assets/niki.mp3" loop></audio>
                     </div>
 
                     <!-- Start: Preloader sides - Model 1 -->
@@ -2078,6 +2113,19 @@ about schools and school websites related to the world of digitalization.
 
   <!-- custom js link-->
   <script src="https://codewithsadee.github.io/vcard-personal-portfolio/assets/js/script.js"></script>
+	<script>function start () {
+  // (PART A) GET SPLASH SCREEN 
+  let splash = document.getElementById("splash");
+
+  // (PART B) PLAY BGM & REMOVE SPLASH SCREEN AFTER FADE IN
+  splash.addEventListener("transitionend", () => {
+    document.getElementById("bgm").play();
+    splash.remove();
+  });
+
+  // (PART C) GO!
+  splash.classList.add("hide");
+}</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
     
 </script>
