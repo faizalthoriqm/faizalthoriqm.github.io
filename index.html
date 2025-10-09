@@ -33,46 +33,9 @@
 	* {
 	margin: 0;
 	padding: 0;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Cabin', sans-serif;
 }
-
-
-.tampil {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0, 0, 0, 0.7);
-}
-.tampil-body {
-	display: flex;
-	height: 100vh;
-	width: 100%;
-	text-align: center;
-	justify-content: center;
-}
-
-.tampil-body div {
-	border-radius: 20px;
-	padding: 20px;
-	margin: auto;
-	width: 50%;
-	background-color: white;
-}
-.tampil-body button {
-	cursor: pointer;
-	font-size: 1.1em;
-	text-align: center;
-	border-radius: 20px;
-	background-color: #DC143C;
-	border: 0;
-	margin-top: 20px;
-
-	color: white;
-	padding: 10px;
-}
-
+	
 /* Load Settings */
 .no-scroll-y {
     overflow-y: hidden;
@@ -123,7 +86,7 @@
 
 /* Text Loading */
 .ctn-preloader .animation-preloader .txt-loading {
-  font: bold 5em 'Montserrat', sans-serif;
+  font: bold 5em 'Cabin', sans-serif;
     text-align: center;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -323,7 +286,7 @@
 
     /* Text Loading */
     .ctn-preloader .animation-preloader .txt-loading {
-      font: bold 3.5em 'Montserrat', sans-serif;
+      font: bold 3.5em 'Cabin', sans-serif;
     }
 }
 
@@ -337,7 +300,7 @@
 
     /* Text Loading */
     .ctn-preloader .animation-preloader .txt-loading {
-      font: bold 2em 'Montserrat', sans-serif;
+      font: bold 2em 'Cabin', sans-serif;
     }
 }
 </style>
@@ -363,7 +326,21 @@
                         
                         <!-- Spinner -->
                         <div class="spinner"></div>
-                        
+
+						<!-- Start: Text Loading -->
+                        <div class="txt-loading">
+                            <span data-text-preloader="W" class="letters-loading">W</span>
+                            <span data-text-preloader="E" class="letters-loading">E</span>
+                            <span data-text-preloader="L" class="letters-loading">L</span>
+                            <span data-text-preloader="C" class="letters-loading">C</span>
+                            <span data-text-preloader="O" class="letters-loading">O</span>
+                            <span data-text-preloader="M" class="letters-loading">M</span>
+                            <span data-text-preloader="E" class="letters-loading">E</span>
+                           <!--  <span data-text-preloader="I" class="letters-loading">I</span>
+                            <span data-text-preloader="V" class="letters-loading">V</span>
+                            <span data-text-preloader="E" class="letters-loading">E</span> -->
+                        </div>
+                        <!-- End: Text Loading -->
 
                     </div>
 
