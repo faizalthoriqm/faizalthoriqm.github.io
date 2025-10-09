@@ -2088,6 +2088,21 @@ about schools and school websites related to the world of digitalization.
 
   <!-- custom js link-->
   <script src="https://codewithsadee.github.io/vcard-personal-portfolio/assets/js/script.js"></script>
+  <script>document.addEventListener("DOMContentLoaded",
+ function () {
+    setTimeout(function () {
+        document.getElementById("preloader")
+        .style.display = "none";
+        setTimeout(function () 
+        {
+            document.getElementById("splash")
+            .style.display = "none";
+            document.getElementById("content")
+            .style.display = "block";
+            addLiveAnimations();
+        }, 3000);
+    }, 1000);
+});</script>
 	
   <!-- ionicon link= -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
