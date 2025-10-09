@@ -3,9 +3,7 @@
 \*-----------------------------------*/
 
 
-/**
- * copyright 2022 @codewithsadee
- */
+
 
 
 
@@ -74,7 +72,7 @@
    */
 
   /* font-family */
-  --ff-Cabin: 'Cabin', sans-serif;
+  --ff-cabin: 'Cabin', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -164,49 +162,7 @@ body { background: var(--smoky-black); }
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
-* {
-	margin: 0;
-	padding: 0;
-	font-family: 'Cabin', sans-serif;
-}
 
-
-.tampil {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0, 0, 0, 0.7);
-}
-.tampil-body {
-	display: flex;
-	height: 100vh;
-	width: 100%;
-	text-align: center;
-	justify-content: center;
-}
-
-.tampil-body div {
-	border-radius: 20px;
-	padding: 20px;
-	margin: auto;
-	width: 50%;
-	background-color: white;
-}
-.tampil-body button {
-	cursor: pointer;
-	font-size: 1.1em;
-	text-align: center;
-	border-radius: 20px;
-	background-color: #DC143C;
-	border: 0;
-	margin-top: 20px;
-
-	color: white;
-	padding: 10px;
-}
 .sidebar,
 article {
   background: var(--eerie-black-2);
@@ -1921,100 +1877,4 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	font-family: 'Cabin', sans-serif;
-}
-
-
-.tampil {
-	position: inherit;
-}
-.tampil-body {
-	display: flex;
-}
-
-.tampil-body div {
-	border-radius: 20px;
-	padding: 20px;
-	margin: auto;
-	width: 50%;
-	background-color: white;
-}
-.tampil-body button {
-	cursor: pointer;
-	font-size: 1.1em;
-	text-align: center;
-	border-radius: 20px;
-	background-color: #DC143C;
-	border: 0;
-	margin-top: 20px;
-
-	color: white;
-	padding: 10px;
-}
-	
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Cabin", sans-serif;
-}
-
-header{
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 80px;
-}
-
-header h4{
-    position: absolute;
-    left: 10%;
-    bottom: 1rem;
-    font-size: 1.6rem;
-}
-
-/* Splash Screen */
-
-.intro{
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #161616;
-    transition: 1s;
-}
-
-.logo-header{
-    position: absolute;
-    top: 40%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    color: #fffff;
-}
-
-.logo{
-    position: relative;
-    display: inline-block;
-    bottom: -20px;
-    opacity: 0;
-}
-
-.logo.active{
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-}
-
-.logo.fade{
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
 }
