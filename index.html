@@ -35,10 +35,40 @@
 	padding: 0;
 	font-family: 'Cabin', sans-serif;
 }
+/* (PART A) SPLASH SCREEN */
+#splash {
+  /* (A1) FULLSCREEN */
+  position: fixed; top: 0; left: 0; z-index: 999;
+  width: 100vw; height: 100vh;
+
+  /* (A2) CENTER */
+  display: flex;
+  align-items: center; justify-content: center;
+
+  /* (A3) COSMETICS */
+  font-size: 24px;
+  color: #fff; background: #000;
+}
+
+/* (A4) TO HIDE THE SPLASH SCREEN */
+#splash.hide {
+  opacity: 0; visibility: hidden;
+  transition: all 1s;
+}
+
+/* NOT IMPORTANT - COSMETICS */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
 </style>
 	
 <body>
+    <!-- (PART A) SPLASH SCREEN -->
+    <div id="splash" onclick="start()">&#127929; Click to start!</div>
 
+    <!-- (PART B) BGM -->
+    <audio id="bgm" src="https://faizalthoriqm.github.io/assets/niki.mp3" loop></audio>
   <!-- #MAIN -->
 
   <main>
@@ -1781,6 +1811,19 @@ about schools and school websites related to the world of digitalization.
   <!-- ionicon link= -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>function start () {
+  // (PART A) GET SPLASH SCREEN 
+  let splash = document.getElementById("splash");
+
+  // (PART B) PLAY BGM & REMOVE SPLASH SCREEN AFTER FADE IN
+  splash.addEventListener("transitionend", () => {
+    document.getElementById("bgm").play();
+    splash.remove();
+  });
+
+  // (PART C) GO!
+  splash.classList.add("hide");
+}</script>
 </body>
 
 </html>
