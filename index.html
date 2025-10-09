@@ -34,61 +34,6 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Cabin', sans-serif;
-}
-.start-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ffffff22;
-    color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.2em;
-    transition: background 0.3s;
-}
-.start-button:hover {
-    background-color: #ffffff44;
-}
-.tag-text {
-    color: #fff;
-    font-size: 1.4em;
-    letter-spacing: 3px;
-    font-weight: 500;
-    text-align: center;
-    font-family: 'Courier New', monospace;
-    position: relative;
-    opacity: 0;
-    transform: translateY(20px);
-    background: linear-gradient(90deg, 
-        #ffffff,
-        #c0c0c0,
-        #e8e8e8,
-        #ffffff,
-        #a0a0a0,
-        #ffffff
-    );
-    background-size: 400% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: 
-        silverShine 4s linear infinite,
-        fadeInUp 0.5s forwards;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.tag-text:nth-child(1) { animation-delay: 0.5s; }
-.tag-text:nth-child(2) { animation-delay: 1s; }
-.tag-text:nth-child(3) { animation-delay: 1.5s; }
-.tag-text:nth-child(4) { animation-delay: 2.0s; }
-.tag-text:nth-child(5) { animation-delay: 2.5s; }
-
-
-.tag-text span {
-    color: #a0a0a0;
-    -webkit-text-fill-color: #e8e8e8;
-    opacity: 0.9;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
 	
 /* Load Settings */
 .no-scroll-y {
@@ -376,13 +321,13 @@
 						<!-- Start: Text Loading -->
                         <div class="txt-loading">
                             <span data-text-preloader="Welcome" class="letters-loading">Welcome</span>
+							<span data-text-preloader="please wait..." class="letters-loading">please wait...</span>
                            <!--  <span data-text-preloader="I" class="letters-loading">I</span>
                             <span data-text-preloader="V" class="letters-loading">V</span>
                             <span data-text-preloader="E" class="letters-loading">E</span> -->
                         </div>
                         <!-- End: Text Loading -->
                     </div>
-					<div id="start-btn" class="start-button tag-text">Tap here to Start</div>
 
                     <!-- Start: Preloader sides - Model 1 -->
                     <div class="loader-section section-left"></div>
@@ -2133,25 +2078,7 @@ about schools and school websites related to the world of digitalization.
 
   <!-- custom js link-->
   <script src="https://codewithsadee.github.io/vcard-personal-portfolio/assets/js/script.js"></script>
-	<script>function start () {
-  // (PART A) GET SPLASH SCREEN 
-  let splash = document.getElementById("splash");
-
-  // (PART B) PLAY BGM & REMOVE SPLASH SCREEN AFTER FADE IN
-  splash.addEventListener("transitionend", () => {
-    document.getElementById("bgm").play();
-    splash.remove();
-  });
-
-  // (PART C) GO!
-  splash.classList.add("hide");
-}</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-</script>
-	 <script>const startBtn = document.getElementById('start-btn');
-    const bgMusic = document.getElementById('bg-music');
-		startBtn.addEventListener('click', () => {
-        bgMusic.play().catch(console.warn);
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
