@@ -2078,6 +2078,7 @@ about schools and school websites related to the world of digitalization.
   <!-- custom js link-->
   <script src="https://codewithsadee.github.io/vcard-personal-portfolio/assets/js/script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -2109,7 +2110,6 @@ about schools and school websites related to the world of digitalization.
 
 
 </script>
-
   <!-- ionicon link= -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -2121,36 +2121,6 @@ about schools and school websites related to the world of digitalization.
 			audio.play();
 		}
 	</script>
-<script>let intro = document.querySelector('.intro');
-let logo = document.querySelector('.logo-header');
-let logoSpan = document.querySelectorAll('.LOGO');
-
-window.addEventListener('DOMContentLoaded', ()=>{
-
-    setTimeout(()=>{
-
-        logoSpan.forEach((span, idx)=>{
-            setTimeout(()=>{
-                span.classList.add('active');
-            }, (idx + 1) * 400) 
-        });
-
-        setTimeout(()=>{
-            logoSpan.forEach((span, idx)=>{
-
-                setTimeout(()=>{
-                    span.classList.remove('active');
-                    span.classList.add('fade');
-                }, (idx + 1) * 50)
-
-            })
-        },2000);
-
-        setTimeout(()=>{
-            intro.style.top = '-100vh';
-        },2300);
-    })
-})</script>
 </body>
 
 </html>
